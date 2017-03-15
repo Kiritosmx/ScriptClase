@@ -1,6 +1,6 @@
 #!/bin/bash
 clear
-echo " 
+echo "
                                             ▄▄▄█████▓ ██░ ██ ▓█████     ██ ▄█▀ ██▓ ███▄    █   ▄████
                                             ▓  ██▒ ▓▒▓██░ ██▒▓█   ▀     ██▄█▒ ▓██▒ ██ ▀█   █  ██▒ ▀█▒
                                             ▒ ▓██░ ▒░▒██▀▀██░▒███      ▓███▄░ ▒██▒▓██  ▀█ ██▒▒██░▄▄▄░
@@ -10,25 +10,19 @@ echo "
                                                 ░     ▒ ░▒░ ░ ░ ░  ░   ░ ░▒ ▒░ ▒ ░░ ░░   ░ ▒░  ░   ░
                                               ░       ░  ░░ ░   ░      ░ ░░ ░  ▒ ░   ░   ░ ░ ░ ░   ░
                                                       ░  ░  ░   ░  ░   ░  ░    ░           ░       ░    "
-                                                      
-                                                     
-             				    echo  "                         │	                          │"
-					    echo  "              	    │`tput setaf 9 ` Press k to start`tput sgr0`│"
-				            echo "               	    ├─────────────────────────────┤"
-					    echo  "               	    │`tput setaf 5 ` Press Enter to exit `tput sgr0`│"
-					    echo "            	            └─────────────────────────────┘"
-read n
-case $n in
 
 
-	Enter|Enter)
+echo  "                                                 ┌───────────────────────────────────────────────┐"
+echo  "                                                 │`tput setaf 9 ` Press k to start                              `tput sgr0`│"
+echo  "                                                 ├───────────────────────────────────────────────┤"
+echo  "                                                 │`tput setaf 5 ` Press Enter to exit                           `tput sgr0`│"
+echo  "                                                 └───────────────────────────────────────────────┘"
 
-		exit
-		;;
-	k|k)
-
-		./MenuPrincipal.sh
-		;;
-
+read respuesta
+case  $respuesta in
+    k)
+    ./MenuPrincipal.sh
+    ;;
+    *)
+    ;;
 esac
-

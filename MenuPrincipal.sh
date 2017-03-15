@@ -3,70 +3,50 @@
 clear
 tput bold
 echo -e "\e[34m╔═════════════════════════╗`tput sgr0`"
-echo -e "\e[34m║\e[94m      MENU PRINCIPAL `tput sgr0`\e[34m    ║"`tput sgr0`
+echo -e "\e[34m║\e[94m      THEKING GAME `tput sgr0`\e[34m    ║"`tput sgr0`
 echo -e "\e[34m╚═════════════════════════╝`tput sgr0`"
 tput sgr0
 echo "              "
+echo ""
 echo -e " \e[35m ┌──────────────────────┐"
-echo -e "`tput sgr0`▹ \e[95m│ 1.Jugar a The King\e[36m ♛`tput sgr0` `tput sgr0`\e[35m│`tput sgr0` "
+echo -e "`tput sgr0`▹ \e[95m│ 1.Jugar \e[36m ♛`tput sgr0` `tput sgr0`\e[35m│`tput sgr0` "
 echo -e " \e[35m └──────────────────────┘"
 
-echo -e " \e[35m ┌───────────────────┐"
-echo -e "`tput sgr0`▹ \e[95m│ 2.Crear Grupos\e[33m☺   `tput sgr0`\e[35m│ `tput sgr0`"
-echo -e " \e[35m └───────────────────┘"
-echo -e "  ┌─────────────────────┐"
-echo -e "`tput sgr0`▹ \e[95m│ 3.Menu de Control ½`tput sgr0`\e[35m │ `tput sgr0`"
-echo -e " \e[35m └─────────────────────┘"
-echo -e "  ┌───────────────────────────┐"
-echo -e "`tput sgr0`▹ \e[95m│ 4.Ranking `tput sgr0`\e[92m♣`tput sgr0` \e[35m│ `tput sgr0`"
+echo -e " 			 ┌───────────────────────────┐"
+echo -e "`tput sgr0`▹ \e[95m│ 2.Ranking `tput sgr0`\e[92m♣`tput sgr0` \e[35m│ `tput sgr0`"
 echo -e " \e[35m └───────────────────────────┘"
 echo -e " \e[35m ┌────────────────────────┐"
-echo -e "`tput sgr0`▹ \e[95m│ 5.Usuaris Aleatoris \e[33m☻  `tput sgr0`\e[35m│ `tput sgr0`"
+echo -e "`tput sgr0`▹ \e[95m│ 3.Sorteig dels Jugadors \e[33m☻  `tput sgr0`\e[35m│ `tput sgr0`"
 echo -e " \e[35m └────────────────────────┘"
 echo -e " \e[35m ┌───────────────┐"
-echo -e "`tput sgr0`▹ \e[95m│ 6.Opciones\e[35m ♜   `tput sgr0`\e[35m│ `tput sgr0`"
+echo -e "`tput sgr0`▹ \e[95m│ 4.Sorteig del joc \e[33m ♜   `tput sgr0`\e[35m│ `tput sgr0`"
 echo -e " \e[35m └───────────────┘"
 echo -e " \e[35m ┌─────────────┐"
-echo -e "`tput sgr0`▹ \e[95m│ 7.Tienda\e[32m $ `tput sgr0` \e[35m│ `tput sgr0`"
+echo -e "`tput sgr0`▹ \e[95m│ 5.Tienda\e[32m $ `tput sgr0` \e[35m│ `tput sgr0`"
 echo -e " \e[35m └─────────────┘"
 tput sgr0
 echo "          "
+echo ""
 
-echo -n "Introdueix la opció: "
+
 read n
 case $n in
 
 	1)
-		./Usuarinou
-		echo "usuari nou acabat"
+		./Player.sh
+		echo "Entrando en el juego"
 		;;
 	2)
-	        ./Grupnou.sh
+	        Ranking.sh
 		;;
 	3)
-		echo "Introduce la contraseña de admin"
-		read C
-
-			if [ $C = papaia ]
-				then
-			./Control.sh
-
-
-			fi
-
 
 		;;
 	4)
-		./Esdeveniment
+		./EsdevenimentAleatori
 		;;
 
 	5)
-		./Alumne
-		;;
-	6)
-		./Atacs.sh
-		;;
-	7)
 		./tenda.sh
 		;;
 esac
