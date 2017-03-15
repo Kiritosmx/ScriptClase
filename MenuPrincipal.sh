@@ -24,7 +24,7 @@ echo -e " \e[35m ┌────────────────────
 echo -e "`tput sgr0`▹ \e[95m│ 5.Usuaris Aleatoris \e[33m☻  `tput sgr0`\e[35m│ `tput sgr0`"
 echo -e " \e[35m └────────────────────────┘"
 echo -e " \e[35m ┌───────────────┐"
-echo -e "`tput sgr0`▹ \e[95m│ 6.Batalla\e[33m ♜   `tput sgr0`\e[35m│ `tput sgr0`"
+echo -e "`tput sgr0`▹ \e[95m│ 6.Opciones\e[35m ♜   `tput sgr0`\e[35m│ `tput sgr0`"
 echo -e " \e[35m └───────────────┘"
 echo -e " \e[35m ┌─────────────┐"
 echo -e "`tput sgr0`▹ \e[95m│ 7.Tienda\e[32m $ `tput sgr0` \e[35m│ `tput sgr0`"
