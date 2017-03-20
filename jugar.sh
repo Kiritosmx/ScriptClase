@@ -44,3 +44,5 @@ preguntaNick
 muestraTitulo
 echo "Bienvenido $nick"
 read
+
+

@@ -3,8 +3,9 @@
 clear
 
 tiemposleep=0.2
-
+tput setaf 5
 ./animacionVertical.sh titulos/TheKing.txt
+tput sgr0
 sleep $tiemposleep
 
 echo "              "
