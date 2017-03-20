@@ -29,38 +29,40 @@ echo -e " \e[35m └────────────────────
 
 sleep $tiemposleep
 
-echo -e " \e[35m ┌──────────────────────┐"
-echo -e "`tput sgr0`▹ \e[95m│ 4.Sorteig del joc \e[33m   `tput sgr0`\e[35m│ `tput sgr0`"
-echo -e " \e[35m └──────────────────────┘"
+echo -e " \e[35m ┌─────────────┐"
+echo -e "`tput sgr0`▹ \e[95m│ 4.Tienda\e[32m $ `tput sgr0` \e[35m│ `tput sgr0`"
+echo -e " \e[35m └─────────────┘"
+
 
 sleep $tiemposleep
 
-echo -e " \e[35m ┌─────────────┐"
-echo -e "`tput sgr0`▹ \e[95m│ 5.Tienda\e[32m $ `tput sgr0` \e[35m│ `tput sgr0`"
-echo -e " \e[35m └─────────────┘"
-tput sgr0
+echo -e " \e[35m ┌────────────┐"
+echo -e "`tput sgr0`▹ \e[95m│ 5.Salir \e[33m   `tput sgr0`\e[35m│ `tput sgr0`"
+echo -e " \e[35m └────────────┘"
+
 echo "          "
 echo ""
-
+tput sgr0
 
 read n
 case $n in
 
 	1)
-		./Player.sh
-		echo "Entrando en el juego"
-		;;
+		echo "Entrando en el juego..."
+		sleep 1
+		./jugar.sh
+	;;
 	2)
-	      ./Ranking.sh
-		;;
+		./Ranking.sh
+	;;
 	3)
-				./Sorteigjugadors.sh
-		;;
-	4)
-			 ./mododejoc.sh
-		;;
+		./Sorteigjugadors.sh
+	;;
 
-	5)
+	4)
 		./tenda.sh
-		;;
+	;;
+	5)
+		exit
+	;;
 esac
