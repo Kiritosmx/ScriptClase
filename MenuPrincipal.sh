@@ -64,6 +64,10 @@ case $n in
 		./tenda.sh
 	;;
 	5)
+		echo ""
+		echo "  Adiós"
+		sleep 1
+		clear
 		exit
 	;;
 esac
