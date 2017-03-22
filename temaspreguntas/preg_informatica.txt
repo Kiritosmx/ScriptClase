@@ -1,0 +1,5 @@
+1:¿Cuál es el primer ordenador de la história?:3:4
+2:¿Qué es Hardware?:2:4
+3:¿Cuáles de estos ejemplos son periféricos de entrada?:1:4
+4:¿Cuáles son un tipus de virus?:4:4
+5:¿Qué es un Backup?:1:5

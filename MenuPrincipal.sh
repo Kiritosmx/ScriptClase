@@ -65,7 +65,7 @@ case $n in
 	;;
 	5)
 		echo ""
-		echo "  Adiós"
+		echo "  Adios"
 		sleep 1
 		clear
 		exit

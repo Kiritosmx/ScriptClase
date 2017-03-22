@@ -1,6 +1,8 @@
 #!/bin/bash
 clear
 
+puntos=0
+
 function muestraTitulo {
   clear
   tput setaf 9
@@ -43,6 +45,21 @@ preguntaNick
 
 muestraTitulo
 echo "Bienvenido $nick"
-read
+
+echo "$nick" > /tmp/nick.txt
+
+#categoria=
 
 
+sleep 1.5
+clear
+echo ""
+echo "El juego comienza en..."
+sleep 0.8
+./animacionVertical.sh titulos/3.txt
+sleep 0.8
+./animacionVertical.sh titulos/2.txt
+sleep 0.8
+./animacionVertical.sh titulos/1.txt
+sleep 0.8
+clear

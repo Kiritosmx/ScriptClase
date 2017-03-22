@@ -1,0 +1,5 @@
+1:1IBM:2:Un Dell3:MacinTosh:4Alienware
+2:1Es la parte lógica del ordenador:2Es la parte física del ordenador:3Son los programas:4Es un tipus de virus
+3:1CD,DVD y disquete:2:Mouse,escáner y webcam:3Monitor,parlantes y impresora:4Procesador, memoria y coder
+4:Firewalls, P2P Y Blocks:2Floters,Spirrors y Gryps:3AVGS Nortons y Avinas:4Spywares, TRojans Y Malwares
+5:1Es una copia de seguridad de determinados archivos:2Es un anti-virus:3Es un programa de Windows XP:3Es una tagnología de la perfomance de la computadora:4Es un programa para rescatar los archivos de un disco duro formateado:5Es un bug
