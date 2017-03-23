@@ -63,3 +63,8 @@ sleep 0.8
 ./animacionVertical.sh titulos/1.txt
 sleep 0.8
 clear
+
+
+
+
+./muestrapreguntas.sh

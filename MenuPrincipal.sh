@@ -8,6 +8,15 @@ tput setaf 5
 tput sgr0
 sleep $tiemposleep
 
+function muestratitulo {
+	clear
+	tput setaf 5
+	cat titulos/TheKing.txt
+	tput sgr0
+}
+
+
+function opciones {
 echo "              "
 echo ""
 echo ""
@@ -70,4 +79,14 @@ case $n in
 		clear
 		exit
 	;;
+	*)
+		echo "Respuesta incorrecta"
+		sleep 1
+		muestratitulo
+		opciones
+	;;
 esac
+
+}
+
+opciones
