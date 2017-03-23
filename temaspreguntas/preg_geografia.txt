@@ -1,0 +1,6 @@
+1: ¿Islandia está  totalmente cubierta de hielo?:1:2
+2: ¿Qué océano baña la costa de EEUU?:2:5
+3: ¿Como se llama el monte más alto del mundo?:1:4
+4: ¿Cúantos grandes lagos hay en Estados Unidos?:3:3
+5: ¿Cuántos paises integran Rieno Unidoss?:1:5
+6:

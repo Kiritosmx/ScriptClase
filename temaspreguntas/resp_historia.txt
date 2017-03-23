@@ -1,0 +1,5 @@
+ 1-1990 : 2-1983 : 3-1991
+ 1-Alemania : 2-Francia : 3-Italia
+ 1-Polonia : 2-Normandía : 3-Alemania
+ 1-Una loba : 2-Una perra : 3-Una zorra
+ 1-Troyano : 2-Cartagines : 3-Ateniense

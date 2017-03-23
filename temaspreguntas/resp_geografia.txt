@@ -1,0 +1,5 @@
+ 1-Mentira : 2-Verdad
+ 1-Índico : 2-Atlántico : 3-Pacifico : 4-Océano del Este
+ 1-Everest : 2-Makalu : 3-Benicadell : 4-Kilimanjaro
+ 1-3 : 2-6 : 3-5
+ 1-4 : 2-5 : 3-6 : 4-8 : 5-9
