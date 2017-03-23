@@ -21,7 +21,7 @@ function pregunta {
 
   echo ""
 
-  read respuesta
+  read respuesta                                              #Detector acierto / fallo
   if [[ $respuesta -eq $respuestaCorrecta ]]; then
     echo "correcto"
     read
@@ -31,13 +31,13 @@ function pregunta {
   fi
 
 
-  let preguntaActual=$preguntaActual+1
-  if [[ $preguntaActual -lt $ultimaPregunta ]];
+  let preguntaActual=$preguntaActual+1                     #Sumar 1 a la pregunta actual para pasar a la siguiente
+  if [[ $preguntaActual -lt $ultimaPregunta ]];            #Detecta si todavía no ha superado la última pregnta
   then
-    pregunta
+    pregunta                                               #Realiza la siguiente pregunta
   fi
 
-  final
+  final                                                    #Para al final si ha llegado a la última pregunta
 }
 
 function final {
@@ -46,9 +46,6 @@ function final {
   read
   exit
 }
-
-
-
 
 
 
