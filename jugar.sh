@@ -45,15 +45,28 @@ preguntaNick
 
 muestraTitulo
 echo "Bienvenido $nick"
-
+sleep 2
 echo "$nick" > /tmp/nick.txt
 
-#categoria=
 
+#SCRIPT CATEGORIA RANDOM
+ls -l temaspreguntas | grep ^- | tr -s " " | cut -d" " -f9 | cut -d_ -f2 | cut -d. -f1 > /tmp/categorias.txt      #Muestra las categorias y las pasa a un fichero
+
+lineas=`ls -l temaspreguntas | grep ^- | tr -s " " | cut -d" " -f9 | cut -d_ -f2 | cut -d. -f1 | wc | tr -s " " | cut -d" " -f2`
+
+echo $((RANDOM%`echo $lineas`)) > /tmp/random
+lineaRandom=`cat /tmp/random`
+let lineaRandom=$lineaRandom+1
+
+categoria=`cat /tmp/categorias.txt | head -$lineaRandom | tail -n+$lineaRandom`
+#FIN CATEGORIA RANDOM
+
+clear
+echo "Ha tocado $categoria"
+sleep 3
 
 sleep 1.5
 clear
-echo ""
 echo "El juego comienza en..."
 sleep 0.8
 ./animacionVertical.sh titulos/3.txt
@@ -67,4 +80,4 @@ clear
 
 
 
-./muestrapreguntas.sh
+./muestrapreguntas.sh $categoria

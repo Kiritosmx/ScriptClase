@@ -8,10 +8,11 @@ function pregunta {
 
   respuestaCorrecta=`cat temaspreguntas/preg_$categoria.txt | head -$preguntaActual | tail -n+$preguntaActual | cut -d: -f3`    #Pone en variable la respuesta correcta
   posiblesRespuestas=`cat temaspreguntas/preg_$categoria.txt | head -$preguntaActual | tail -n+$preguntaActual | cut -d: -f4`   #Pone en la variable el numero de veces que debe repetirse el bucle para poder mostrar todas las respuestas
-  cat temaspreguntas/preg_$categoria.txt | head -$preguntaActual | tail -n+$preguntaActual | cut -d: -f2                   #Muestra la pregunta
+  echo "$categoria" | tr a-z A-Z | toilet -F border -F metal
   echo ""
+  echo ""
+  cat temaspreguntas/preg_$categoria.txt | head -$preguntaActual | tail -n+$preguntaActual | cut -d: -f2                   #Muestra la pregunta
   loop=0
-
 
   while [[ $loop -ne $posiblesRespuestas ]]; do                           #BUCLE para mostrarte las resapuestas una a una
     let loop=$loop+1
@@ -42,7 +43,7 @@ function pregunta {
 
 function final {
   clear
-  echo "fin"
+  ./animacionVertical.sh titulos/finalpreguntas.txt
   read
   exit
 }

@@ -2,16 +2,12 @@
 #categori aleatoriamente
 clear
 
+ls -l temaspreguntas | grep ^- | tr -s " " | cut -d" " -f9 | cut -d_ -f2 | cut -d. -f1 > /tmp/categorias.txt      #Muestra las categorias y las pasa a un fichero
 
-lineas=`ls -l  | wc | tr -s " " | cut -d" " -f2`
-aleatorio=$lineas
-let=$lineas-1
+lineas=`ls -l temaspreguntas | grep ^- | tr -s " " | cut -d" " -f9 | cut -d_ -f2 | cut -d. -f1 | wc | tr -s " " | cut -d" " -f2`
 
-echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-echo " `cat $lineas  "
-echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+echo $((RANDOM%`echo $lineas`)) > /tmp/random
+lineaRandom=`cat /tmp/random`
+let lineaRandom=$lineaRandom+1
 
-
-#tambien habia pensado esto aleatorio=`ls -l  | wc | tr -s " " | cut -d" " -f2`
-#o aleatorio=$lineas`ls -l  | wc | tr -s " " | cut -d" " -f2`
-#pero no estoy muy seguro
+cat /tmp/categorias.txt | head -$lineaRandom | tail -n+$lineaRandom
