@@ -49,6 +49,35 @@ sleep 2
 echo "$nick" > /tmp/nick.txt
 
 
+echo -e " \e[35m ┌──────────────────────────────────┐"
+echo -e "`tput sgr0`▹ \e[95m│ 3.Elige modo de juego          \e[33m `tput sgr0`\e[35m│ `tput sgr0`"
+echo -e " \e[35m └──────────────────────────────────┘"
+
+
+
+
+function modojuego {
+echo "MODOS DEL JUEGO"
+}modojuego in
+  y)
+      echo "Entrado..."
+      notify-send "HAS ENTRADO EN LOS MODOS DE THE KING "
+      ./mododejuego.sh
+    ;;
+
+  n)
+       echo "Volver al menu principal"
+       ./MenuPrincial.sh
+    ;;
+esac
+
+
+read $modojuego
+
+
+
+
+
 #SCRIPT CATEGORIA RANDOM
 ls -l temaspreguntas | grep ^- | tr -s " " | cut -d" " -f9 | cut -d_ -f2 | cut -d. -f1 > /tmp/categorias.txt      #Muestra las categorias y las pasa a un fichero
 

@@ -1,2 +1,5 @@
 toilet
 lolcat
+pdmenu
+sudo apt-get install dialog
+http://aplicacionesysistemas.com/dialog-crear-menus-tus-scripts/
