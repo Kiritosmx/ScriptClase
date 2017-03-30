@@ -1,4 +1,4 @@
 #!/bin/bash
 clear
-/animacionVertical.sh titulos/modojuego.txt
+/animaciones/animacionVertical.sh titulos/modojuego.txt
 sleep 2

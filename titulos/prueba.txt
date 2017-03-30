@@ -1,5 +1,4 @@
-Extrae las partes seleccionadas del fichero.
-Se marca el espacio como separador y muertra la fila 8.
-Se marca el espacio como separador y muestra de la fila 5 a 8.
-Se marca el espacio como separador y muertra la fila 5 y 8.
+123
+456
+789
  

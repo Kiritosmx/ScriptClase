@@ -37,7 +37,7 @@ nick=`whoami`
 
 sleep 0.7
 tput setaf 9
-./animacionVertical.sh titulos/startking.txt
+./animaciones/animacionVertical.sh titulos/startking.txt
 tput sgr0
 sleep 0.5
 

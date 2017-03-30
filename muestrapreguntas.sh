@@ -43,7 +43,7 @@ function pregunta {
 
 function final {
   clear
-  ./animacionVertical.sh titulos/finalpreguntas.txt
+  ./animaciones/animacionVertical.sh titulos/finalpreguntas.txt
   read
   exit
 }
@@ -53,5 +53,5 @@ function final {
 echo "$1" > /tmp/categoria.txt
 categoria=`cat /tmp/categoria.txt`
 preguntaActual=1
-ultimaPregunta=`cat temaspreguntas/preg_informatica.txt | tail -1 | cut -d: -f1`
+ultimaPregunta=`cat temaspreguntas/preg_$categoria.txt | tail -1 | cut -d: -f1`
 pregunta

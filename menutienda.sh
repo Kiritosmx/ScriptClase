@@ -5,7 +5,7 @@ clear
 
 tiemposleep=0.2
 tput setaf 4
-./animacionVertical titulos/titulotienda.txt
+./animaciones/animacionVertical titulos/titulotienda.txt
 tput sgr0
 sleep $tiemposleep
 
