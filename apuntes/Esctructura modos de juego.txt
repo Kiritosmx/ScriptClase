@@ -1,0 +1,9 @@
+A ver esto es la estructura de Jugar.sh y mododejuego.sh
+
+Entras a jugar.sh, te sale lo de la animación y todo eso , luego te sale lo del modo de juego con recuadro y le das a entrar.
+Una vez entras, dentro del script de modo de juego , lo primero es el titulo con la animación, luego un menu :
+  
+            Modo clasico 
+            ONE VS ONE
+            
+            Y ya una vez entras al modo clasico se ejecuta el script de muestrapreguntas.
