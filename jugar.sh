@@ -49,30 +49,37 @@ sleep 2
 echo "$nick" > /tmp/nick.txt
 
 
-echo -e " \e[35m ┌──────────────────────────────────┐"
-echo -e "`tput sgr0`▹ \e[95m│ 3.Elige modo de juego          \e[33m `tput sgr0`\e[35m│ `tput sgr0`"
-echo -e " \e[35m └──────────────────────────────────┘"
-
-
 
 
 function modojuego {
-echo "MODOS DEL JUEGO"
-}modojuego in
-  y)
-      echo "Entrado..."
-      notify-send "HAS ENTRADO EN LOS MODOS DE THE KING "
+
+  echo -e " \e[35m ┌──────────────────────────────────┐"
+  echo -e "`tput sgr0`  \e[95m│ 3.Elige modo de juego           \e[33m `tput sgr0`\e[35m│ `tput sgr0`"
+  echo -e " \e[35m └──────────────────────────────────┘"
+
+case $modojuego in
+  
+  1)
+      echo "Entrando...."
       ./mododejuego.sh
-    ;;
-
-  n)
-       echo "Volver al menu principal"
-       ./MenuPrincial.sh
-    ;;
+      notify-send "Has entrado en los modos de juego"
+  ;;
+  2)
+    muestraTitulo
+    echo "Introduce tu nick:"
+    read nick
+  ;;
+  *)
+    muestraTitulo
+    echo "Respuesta incorrecta utilizar y/n"
+    sleep 1.4
+    muestraTitulo
+    preguntaNick
+  ;;
 esac
+}
 
 
-read $modojuego
 
 
 
