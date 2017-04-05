@@ -54,27 +54,25 @@ echo "$nick" > /tmp/nick.txt
 function modojuego {
 
   echo -e " \e[35m ┌──────────────────────────────────┐"
-  echo -e "`tput sgr0`  \e[95m│ 3.Elige modo de juego           \e[33m `tput sgr0`\e[35m│ `tput sgr0`"
+  echo -e "`tput sgr0`  \e[95m│ Elige modo de juego           \e[33m `tput sgr0`\e[35m│ `tput sgr0`"
   echo -e " \e[35m └──────────────────────────────────┘"
 
 case $modojuego in
-  
+
   1)
       echo "Entrando...."
       ./mododejuego.sh
       notify-send "Has entrado en los modos de juego"
   ;;
   2)
-    muestraTitulo
-    echo "Introduce tu nick:"
-    read nick
+      echo "Volver al menu principal"
+      MenuPrinciapl.sh
   ;;
   *)
     muestraTitulo
-    echo "Respuesta incorrecta utilizar y/n"
+    echo "Respuesta incorrecta utilizar 1/2"
     sleep 1.4
-    muestraTitulo
-    preguntaNick
+
   ;;
 esac
 }
