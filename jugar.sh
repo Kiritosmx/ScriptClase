@@ -10,6 +10,8 @@ function muestraTitulo {
   tput sgr0
 }
 
+#funcion que hace muostrar el titulo del script
+
 function preguntaNick {
   echo "¿Utilizar este nick: $nick? [y/n]"
   read yn
@@ -31,7 +33,7 @@ function preguntaNick {
   esac
 }
 
-
+#Esta funcion es para el nick del jugador
 
 nick=`whoami`
 
@@ -39,27 +41,29 @@ sleep 0.7
 tput setaf 9
 ./animaciones/animacionVertical.sh titulos/startking.txt
 tput sgr0
-sleep 0.5
+sleep 0.2
 
 preguntaNick
 
+#ejecuta la funcionss
+
 muestraTitulo
 echo "Bienvenido $nick"
-sleep 2
+sleep 1.5
 echo "$nick" > /tmp/nick.txt
 
-
+#ejecuta la funcion de muestra titulo, da la bienvenida al jugador y lo guarda en un fitxero temporal
 
 
 function modojuego {
 
   echo -e " \e[35m ┌──────────────────────────────────────────────┐"
-  echo -e "`tput sgr0`  \e[95m│ 1- Elige modo de juego          \e[33m `tput sgr0`\e[35m│ `tput sgr0`"
-  echo -e "`tput sgr0`  \e[95m│ 2- Volver al Menu Principal       \e[33m `tput sgr0`\e[35m│ `tput sgr0`"
+  echo -e "`tput sgr 9`  \e[95m│ 1- Elige modo de juego                      \e[33m `tput sgr0`\e[35m│ `tput sgr 9`"
+  echo -e "`tput bold`  \e[95m│ 2- Volver al Menu Principal                 \e[33m `tput sgr0`\e[35m│ `tput sgr0 `"
   echo -e " \e[35m └──────────────────────────────────────────────┘"
 
 
-  read $respuesta
+read respuesta
 
 case $modojuego in
 
@@ -74,8 +78,7 @@ case $modojuego in
   ;;
   *)
     muestraTitulo
-    echo "Respuesta incorrecta utilizar 1/2"
-    sleep 1.4
+    sleep 1
     muestraTitulo
     preguntaNick
 
@@ -84,6 +87,8 @@ esac
 }
 
 
+
+modojuego
 
 
 
