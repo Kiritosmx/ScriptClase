@@ -87,12 +87,15 @@ esac
 }
 
 
+#TODA ESTA FUNCION ES LA QUE DIRIGE AL SCRIPT DE MODOS DE JUEGO DONDE LO ELIGES Y EMPIEZAS A JUGAR
+#TAMBIEN TE DA LA OPCION DE VOLVER AL MENU PRINCIPAL
+
 
 modojuego
 
+#EJECUTA LA FUNCION DE MODO DE JUEGO
 
-
-
+#ESTAS SON LOS TEMAS CON SUS RESPECTIVAS PREGUNTAS 
 
 #SCRIPT CATEGORIA RANDOM
 ls -l temaspreguntas | grep ^- | tr -s " " | cut -d" " -f9 | cut -d_ -f2 | cut -d. -f1 > /tmp/categorias.txt      #Muestra las categorias y las pasa a un fichero

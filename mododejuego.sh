@@ -17,7 +17,7 @@ function modoclasico {
 
 clear
 tput setaf 5
-./animaciones/animacionVertical.sh titulos/modojuego.txt 
+./animaciones/animacionVertical.sh titulos/modojuego.txt
 tput sgr0
 sleep 0.5
 
@@ -37,6 +37,8 @@ case $respuesta in
       ./unocontrauno.sh
   ;;
   *)
-    ./mododejuego.sh 
+    ./mododejuego.sh
   ;;
 esac
+
+#FUNCION DONDE TIENE QUE ELEGIR EL MODO DE JUEGO QUE QUIERAS Y EMPEZAR A JUGAR
