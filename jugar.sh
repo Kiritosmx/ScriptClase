@@ -53,9 +53,13 @@ echo "$nick" > /tmp/nick.txt
 
 function modojuego {
 
-  echo -e " \e[35m ┌──────────────────────────────────┐"
-  echo -e "`tput sgr0`  \e[95m│ Elige modo de juego           \e[33m `tput sgr0`\e[35m│ `tput sgr0`"
-  echo -e " \e[35m └──────────────────────────────────┘"
+  echo -e " \e[35m ┌──────────────────────────────────────────────┐"
+  echo -e "`tput sgr0`  \e[95m│ 1- Elige modo de juego          \e[33m `tput sgr0`\e[35m│ `tput sgr0`"
+  echo -e "`tput sgr0`  \e[95m│ 2- Volver al Menu Principal       \e[33m `tput sgr0`\e[35m│ `tput sgr0`"
+  echo -e " \e[35m └──────────────────────────────────────────────┘"
+
+
+  read $respuesta
 
 case $modojuego in
 
@@ -66,12 +70,14 @@ case $modojuego in
   ;;
   2)
       echo "Volver al menu principal"
-      MenuPrinciapl.sh
+      ./MenuPrinciapl.sh
   ;;
   *)
     muestraTitulo
     echo "Respuesta incorrecta utilizar 1/2"
     sleep 1.4
+    muestraTitulo
+    preguntaNick
 
   ;;
 esac
