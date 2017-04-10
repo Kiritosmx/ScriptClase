@@ -56,6 +56,8 @@ echo "$nick" > /tmp/nick.txt
 
 
 function modojuego {
+  clear
+  muestraTitulo
 
   echo -e " \e[35m ┌──────────────────────────────────────────────┐"
   echo -e "`tput sgr 9`  \e[95m│ 1- Elige modo de juego                      \e[33m `tput sgr0`\e[35m│ `tput sgr 9`"
@@ -65,15 +67,13 @@ function modojuego {
 
 read respuesta
 
-case $modojuego in
+case $respuesta in
 
   1)
-      echo "Entrando...."
       ./mododejuego.sh
       notify-send "Has entrado en los modos de juego"
   ;;
   2)
-      echo "Volver al menu principal"
       ./MenuPrinciapl.sh
   ;;
   *)
@@ -95,7 +95,7 @@ modojuego
 
 #EJECUTA LA FUNCION DE MODO DE JUEGO
 
-#ESTAS SON LOS TEMAS CON SUS RESPECTIVAS PREGUNTAS 
+#ESTOS SON LOS TEMAS CON SUS RESPECTIVAS PREGUNTAS
 
 #SCRIPT CATEGORIA RANDOM
 ls -l temaspreguntas | grep ^- | tr -s " " | cut -d" " -f9 | cut -d_ -f2 | cut -d. -f1 > /tmp/categorias.txt      #Muestra las categorias y las pasa a un fichero
@@ -111,17 +111,15 @@ categoria=`cat /tmp/categorias.txt | head -$lineaRandom | tail -n+$lineaRandom`
 
 clear
 echo "Ha tocado $categoria"
-sleep 3
-
 sleep 1.5
 clear
 echo "El juego comienza en..."
 sleep 0.8
-./animacionVertical.sh titulos/3.txt
+./animaciones/animacionVertical.sh titulos/3.txt
 sleep 0.8
-./animacionVertical.sh titulos/2.txt
+./animaciones/animacionVertical.sh titulos/2.txt
 sleep 0.8
-./animacionVertical.sh titulos/1.txt
+./animaciones/animacionVertical.sh titulos/1.txt
 sleep 0.8
 clear
 

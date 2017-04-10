@@ -3,9 +3,9 @@
 function opciones {
 
   sleep $tiemposleep
-  echo -e " ╔═══════════╗"
-  echo -e " │1.Comprar "Vida"`tput sgr0`|"
-  echo -e " ╚═══════════╝"
+  echo -e " ╔══╗" ╔══════════════╗
+  echo -e " │1.| |Comprar "Vida"`tput sgr0`  |"
+  echo -e " ╚══╝" ╚══════════════╝
 
   sleep $tiemposleep
   echo -e " ╔══╗" ╔═══════════╗
@@ -13,9 +13,9 @@ function opciones {
   echo -e " ╚══╝" ╚═══════════╝
 
  sleep $tiemposleep
- echo -e " ╔══╗" ╔═══════════╗
- echo -e " │3.│ │Comprar "XP"`tput sgr0` │"
- echo -e " ╚══╝" ╚═══════════╝
+ echo -e " ╔══╗" ╔══════════════════╗
+ echo -e " │3.│ │Comprar "Comodines"`tput sgr0` │"
+ echo -e " ╚══╝" ╚══════════════════╝
 
 }
 

@@ -1,5 +1,7 @@
 #!/bin/bash
 clear
-echo "Bobo"
-sleep 2
-pkill session
+
+./animaciones/animacionVertical.sh titulos/modoclasico.txt
+
+
+sleep 2.3
