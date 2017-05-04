@@ -24,7 +24,6 @@ function pregunta {
   done
 
   echo ""
-  echo "$respuestaCorrecta"
   read respuesta                                              #Detector acierto / fallo
   if [[ $respuesta -eq $respuestaCorrecta ]]; then
     echo "correcto"
@@ -33,7 +32,6 @@ function pregunta {
     rc=`cat temaspreguntas/resp_$categoria.txt  | head -$preguntaActual | tail -n+$preguntaActual | cut -d: -f$respuestaCorrecta`
     echo "fallo"
     echo -e "\nLa respuesta correcta es: $rc"
-    read
     sleep 1.8
   fi
 
