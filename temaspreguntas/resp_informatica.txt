@@ -1,5 +1,5 @@
  1-IBM : 2-Un Dell : 3-MacinTosh : 4-Alienware
  1-Es la parte lógica del ordenador : 2-Es la parte física del ordenador : 3-Son los programas : 4-Es un tipus de virus
- 1-CD,DVD y disquete : 2-Mouse,escáner y webcam : 3-Monitor,parlantes y impresora : 4-Procesador, memoria y coder
+ 1-CD,DVD y disquete : 2-Mouse,escáner y impresora : 3-Monitor,parlantes y impresora : 4-Procesador, memoria y coder
  1-Firewalls, P2P Y Blocks : 2-Floters,Spirrors y Gryps : 3-AVGS Nortons y Avinas : 4-Spywares, Trojans Y Malwares
  1-Es una copia de seguridad de determinados archivos : 2-Es un anti-virus : 3-Es un programa de Windows XP: 4-Es una tagnología de la perfomance de la computadora : 5-Es un programa para rescatar los archivos de un disco duro formateado : 5-Es un bug

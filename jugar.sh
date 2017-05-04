@@ -71,7 +71,7 @@ case $respuesta in
 
   1)
       ./mododejuego.sh
-      notify-send "Has entrado en los modos de juego"
+    
   ;;
   2)
       ./MenuPrinciapl.sh

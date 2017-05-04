@@ -1,5 +1,8 @@
 #!/bin/bash
 
+tiempo=0.5        #Está función es la del sleep que hay cuando entre pregunta y pregunta cuando sale si se ha contestado correctamente o no
+
+
 function pregunta {
   clear
 
@@ -8,7 +11,7 @@ function pregunta {
 
   respuestaCorrecta=`cat temaspreguntas/preg_$categoria.txt | head -$preguntaActual | tail -n+$preguntaActual | cut -d: -f3`    #Pone en variable la respuesta correcta
   posiblesRespuestas=`cat temaspreguntas/preg_$categoria.txt | head -$preguntaActual | tail -n+$preguntaActual | cut -d: -f4`   #Pone en la variable el numero de veces que debe repetirse el bucle para poder mostrar todas las respuestas
-  echo "$categoria" | tr a-z A-Z | toilet -F border -F gay
+  echo "$categoria" | tr a-z A-Z | toilet -F border
   echo ""
   echo ""
   cat temaspreguntas/preg_$categoria.txt | head -$preguntaActual | tail -n+$preguntaActual | cut -d: -f2                   #Muestra la pregunta
@@ -21,14 +24,17 @@ function pregunta {
   done
 
   echo ""
-
+  echo "$respuestaCorrecta"
   read respuesta                                              #Detector acierto / fallo
   if [[ $respuesta -eq $respuestaCorrecta ]]; then
     echo "correcto"
-    read
+    sleep $tiempo
   elif [[ $resapuesta -ne $respuestaCorrecta ]]; then
+    rc=`cat temaspreguntas/resp_$categoria.txt  | head -$preguntaActual | tail -n+$preguntaActual | cut -d: -f$respuestaCorrecta`
     echo "fallo"
+    echo -e "\nLa respuesta correcta es: $rc"
     read
+    sleep 1.8
   fi
 
 
@@ -41,11 +47,19 @@ function pregunta {
   final                                                    #Para al final si ha llegado a la última pregunta
 }
 
+
+
+
+
+
+
+
+
 function final {
   clear
   ./animaciones/animacionVertical.sh titulos/finalpreguntas.txt
   read
-  exit
+  ./Ranking.sh
 }
 
 

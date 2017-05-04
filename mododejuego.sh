@@ -12,6 +12,8 @@ function modoclasico {
 
 function muestraTitulo {
   cat titulos/modojuego.txt
+
+  notify-send "MODOS DE JUEGO"
 }
 
 function respuesta {

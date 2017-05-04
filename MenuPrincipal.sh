@@ -33,12 +33,6 @@ echo -e " \e[35m └────────────┘"
 
 sleep $tiemposleep
 
-echo -e " \e[35m ┌────────────────────────────┐"
-echo -e "`tput sgr0`▹ \e[95m│ 3.Modos de juego \e[33m `tput sgr0`\e[35m│ `tput sgr0`"
-echo -e " \e[35m └────────────────────────────┘"
-
-sleep $tiemposleep
-
 echo -e " \e[35m ┌─────────────┐"
 echo -e "`tput sgr0`▹ \e[95m│ 4.Tienda\e[32m $ `tput sgr0` \e[35m│ `tput sgr0`"
 echo -e " \e[35m └─────────────┘"
