@@ -46,19 +46,33 @@ function pregunta {
 }
 
 
+function puntos {
+  clear
+
+}
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+#HAY QUE IR ACABANDO LA FUNCION DEL RESULTADO SEGÚN LAS PREGUNTAS ACERTADAS Y EL TIEMPO
 
 function final {
   clear
   ./animaciones/animacionVertical.sh titulos/finalpreguntas.txt
   sleep $tiempo
   exit
-  
+
 }
 
 
