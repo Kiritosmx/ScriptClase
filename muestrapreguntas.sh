@@ -56,8 +56,9 @@ function pregunta {
 function final {
   clear
   ./animaciones/animacionVertical.sh titulos/finalpreguntas.txt
-  read
-  ./Ranking.sh
+  sleep $tiempo
+  exit
+  
 }
 
 
