@@ -1,6 +1,7 @@
 #!/bin/bash
 clear
 
+
 ./animaciones/animacionVertical.sh titulos/modoclasico.txt
 
 

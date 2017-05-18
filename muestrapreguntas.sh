@@ -39,6 +39,7 @@ function pregunta {
   let preguntaActual=$preguntaActual+1                     #Sumar 1 a la pregunta actual para pasar a la siguiente
   if [[ $preguntaActual -lt $ultimaPregunta ]];            #Detecta si todavía no ha superado la última pregnta
   then
+    duracion
     pregunta                                               #Realiza la siguiente pregunta
   fi
 
@@ -72,8 +73,14 @@ function duracion {
   let sfin=$sfin+$mfin+$hfin
   #Segundos del segundo valor
   let segtrans=$sfin-$sinicio
-  echo "Han pasado $segtrans''"
+  echo "Han pasado $segtrans"
 
+}
+
+
+
+function puntos {
+  clear
 }
 
 
@@ -88,7 +95,7 @@ function final {
 
 }
 
-tiempotardado=$duracion
+
 
 echo "$1" > /tmp/categoria.txt
 categoria=`cat /tmp/categoria.txt`
